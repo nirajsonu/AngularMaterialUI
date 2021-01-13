@@ -1,0 +1,35 @@
+<div class="bootstrap-wrapper">
+    <div class="container mt">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="container text-center">
+                <img class="img-fluid" src="/assets/retailer.png" style="width: 100px;">
+            </div>
+            <h1 class="text-center">Register here!!</h1>
+            {{data|json}}
+            <form (ngSubmit)="doSubmitForm()">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input type="text" name="username" [(ngModel)]="data.username" matInput/>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input type="password" name="password" [(ngModel)]="data.password" matInput/>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email id</mat-label>
+                    <input type="text" name="email" [(ngModel)]="data.email" matInput/>
+                </mat-form-field>
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input type="text" name="city" [(ngModel)]="data.city" matInput/>
+                </mat-form-field>
+                <div class="container text-center">
+                    <button type="submit" mat-raised-button color="primary">Register</button>
+                    <button style="margin-left: 10px;" type="reset" mat-raised-button color="accent">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
